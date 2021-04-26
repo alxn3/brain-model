@@ -1,5 +1,7 @@
 import Head from 'next/head';
-import { BrainModel } from 'components/brainmodel';
+import dynamic from 'next/dynamic';
+
+const BrainModel = dynamic(import('components/brainmodel'), { ssr: false });
 
 const Model: React.FC = () => {
   return (
