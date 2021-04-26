@@ -17,7 +17,7 @@ const BrainModel: React.FC = () => {
   return (
     <div className="h-screen">
       {selected && (
-        <div className="z-10 absolute bg-white">
+        <div className="z-10 absolute bg-white p-8 rounded-md">
           <h1>{selected.name}</h1>
         </div>
       )}
