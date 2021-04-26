@@ -1,8 +1,6 @@
 import { Suspense, useState, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { PerspectiveCamera, OrbitControls } from '@react-three/drei';
-import Model from 'data/models';
-import BrainComponent from './braincomponent';
 import {
   EffectComposer,
   Outline,
@@ -10,7 +8,7 @@ import {
   Noise,
   Vignette,
 } from '@react-three/postprocessing';
-import { BlendFunction, Resizer, KernelSize } from 'postprocessing';
+import ModelScene from './modelscene';
 
 const BrainModel: React.FC = () => {
   const [selected, setSelected] = useState(null);
@@ -28,21 +26,6 @@ const BrainModel: React.FC = () => {
         <pointLight position={[-10, -10, -10]} />
         <PerspectiveCamera makeDefault position={[0, 0, 300]} />
         <OrbitControls maxDistance={1000} />
-        <Suspense fallback={null}>
-          {Model.map((obj) => {
-            return (
-              <BrainComponent
-                key={obj.file}
-                file={`pial_DK_obj/${obj.file}`}
-                onClick={() => {
-                  setSelected(obj);
-                  console.log(obj);
-                }}
-                selected={obj.file == selected?.file}
-              />
-            );
-          })}
-        </Suspense>
         <EffectComposer>
           <Bloom
             luminanceThreshold={0}
@@ -50,6 +33,9 @@ const BrainModel: React.FC = () => {
             height={10}
             opacity={0.5}
           />
+          <Suspense fallback={null}>
+            <ModelScene selected={selected} setSelected={setSelected} />
+          </Suspense>
           <Noise opacity={0.0125} />
           <Vignette eskil={false} offset={0.1} darkness={1.1} />
         </EffectComposer>

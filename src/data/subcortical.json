@@ -1,0 +1,102 @@
+[
+  { "name": "3rd-Ventricle", "file": "3rd-Ventricle.obj", "description": "" },
+  { "name": "4th-Ventricle", "file": "4th-Ventricle.obj", "description": "" },
+  { "name": "Brain-Stem", "file": "Brain-Stem.obj", "description": "" },
+  { "name": "CC_Anterior", "file": "CC_Anterior.obj", "description": "" },
+  { "name": "CC_Central", "file": "CC_Central.obj", "description": "" },
+  {
+    "name": "CC_Mid_Anterior",
+    "file": "CC_Mid_Anterior.obj",
+    "description": ""
+  },
+  {
+    "name": "CC_Mid_Posterior",
+    "file": "CC_Mid_Posterior.obj",
+    "description": ""
+  },
+  { "name": "CC_Posterior", "file": "CC_Posterior.obj", "description": "" },
+  {
+    "name": "Left-Accumbens-area",
+    "file": "Left-Accumbens-area.obj",
+    "description": ""
+  },
+  { "name": "Left-Amygdala", "file": "Left-Amygdala.obj", "description": "" },
+  { "name": "Left-Caudate", "file": "Left-Caudate.obj", "description": "" },
+  {
+    "name": "Left-Cerebellum-Cortex",
+    "file": "Left-Cerebellum-Cortex.obj",
+    "description": ""
+  },
+  {
+    "name": "Left-Cerebellum-White-Matter",
+    "file": "Left-Cerebellum-White-Matter.obj",
+    "description": ""
+  },
+  {
+    "name": "Left-Hippocampus",
+    "file": "Left-Hippocampus.obj",
+    "description": ""
+  },
+  {
+    "name": "Left-Inf-Lat-Vent",
+    "file": "Left-Inf-Lat-Vent.obj",
+    "description": ""
+  },
+  {
+    "name": "Left-Lateral-Ventricle",
+    "file": "Left-Lateral-Ventricle.obj",
+    "description": ""
+  },
+  { "name": "Left-Pallidum", "file": "Left-Pallidum.obj", "description": "" },
+  { "name": "Left-Putamen", "file": "Left-Putamen.obj", "description": "" },
+  {
+    "name": "Left-Thalamus-Proper",
+    "file": "Left-Thalamus-Proper.obj",
+    "description": ""
+  },
+  { "name": "Left-VentralDC", "file": "Left-VentralDC.obj", "description": "" },
+  {
+    "name": "Right-Accumbens-area",
+    "file": "Right-Accumbens-area.obj",
+    "description": ""
+  },
+  { "name": "Right-Amygdala", "file": "Right-Amygdala.obj", "description": "" },
+  { "name": "Right-Caudate", "file": "Right-Caudate.obj", "description": "" },
+  {
+    "name": "Right-Cerebellum-Cortex",
+    "file": "Right-Cerebellum-Cortex.obj",
+    "description": ""
+  },
+  {
+    "name": "Right-Cerebellum-White-Matter",
+    "file": "Right-Cerebellum-White-Matter.obj",
+    "description": ""
+  },
+  {
+    "name": "Right-Hippocampus",
+    "file": "Right-Hippocampus.obj",
+    "description": ""
+  },
+  {
+    "name": "Right-Inf-Lat-Vent",
+    "file": "Right-Inf-Lat-Vent.obj",
+    "description": ""
+  },
+  {
+    "name": "Right-Lateral-Ventricle",
+    "file": "Right-Lateral-Ventricle.obj",
+    "description": ""
+  },
+  { "name": "Right-Pallidum", "file": "Right-Pallidum.obj", "description": "" },
+  { "name": "Right-Putamen", "file": "Right-Putamen.obj", "description": "" },
+  {
+    "name": "Right-Thalamus-Proper",
+    "file": "Right-Thalamus-Proper.obj",
+    "description": ""
+  },
+  {
+    "name": "Right-VentralDC",
+    "file": "Right-VentralDC.obj",
+    "description": ""
+  }
+]

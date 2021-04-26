@@ -1,0 +1,109 @@
+[
+  { "name": "bankssts", "file": "bankssts.obj", "description": "" },
+  {
+    "name": "caudalanteriorcingulate",
+    "file": "caudalanteriorcingulate.obj",
+    "description": ""
+  },
+  {
+    "name": "caudalmiddlefrontal",
+    "file": "caudalmiddlefrontal.obj",
+    "description": ""
+  },
+  { "name": "cuneus", "file": "cuneus.obj", "description": "" },
+  { "name": "entorhinal", "file": "entorhinal.obj", "description": "" },
+  { "name": "frontalpole", "file": "frontalpole.obj", "description": "" },
+  { "name": "fusiform", "file": "fusiform.obj", "description": "" },
+  {
+    "name": "inferiorparietal",
+    "file": "inferiorparietal.obj",
+    "description": ""
+  },
+  {
+    "name": "inferiortemporal",
+    "file": "inferiortemporal.obj",
+    "description": ""
+  },
+  { "name": "insula", "file": "insula.obj", "description": "" },
+  {
+    "name": "isthmuscingulate",
+    "file": "isthmuscingulate.obj",
+    "description": ""
+  },
+  {
+    "name": "lateraloccipital",
+    "file": "lateraloccipital.obj",
+    "description": ""
+  },
+  {
+    "name": "lateralorbitofrontal",
+    "file": "lateralorbitofrontal.obj",
+    "description": ""
+  },
+  { "name": "lingual", "file": "lingual.obj", "description": "" },
+  {
+    "name": "medialorbitofrontal",
+    "file": "medialorbitofrontal.obj",
+    "description": ""
+  },
+  { "name": "middletemporal", "file": "middletemporal.obj", "description": "" },
+  { "name": "paracentral", "file": "paracentral.obj", "description": "" },
+  {
+    "name": "parahippocampal",
+    "file": "parahippocampal.obj",
+    "description": ""
+  },
+  {
+    "name": "parsopercularis",
+    "file": "parsopercularis.obj",
+    "description": ""
+  },
+  { "name": "parsorbitalis", "file": "parsorbitalis.obj", "description": "" },
+  {
+    "name": "parstriangularis",
+    "file": "parstriangularis.obj",
+    "description": ""
+  },
+  { "name": "pericalcarine", "file": "pericalcarine.obj", "description": "" },
+  { "name": "postcentral", "file": "postcentral.obj", "description": "" },
+  {
+    "name": "posteriorcingulate",
+    "file": "posteriorcingulate.obj",
+    "description": ""
+  },
+  { "name": "precentral", "file": "precentral.obj", "description": "" },
+  { "name": "precuneus", "file": "precuneus.obj", "description": "" },
+  {
+    "name": "rostralanteriorcingulate",
+    "file": "rostralanteriorcingulate.obj",
+    "description": ""
+  },
+  {
+    "name": "rostralmiddlefrontal",
+    "file": "rostralmiddlefrontal.obj",
+    "description": ""
+  },
+  {
+    "name": "superiorfrontal",
+    "file": "superiorfrontal.obj",
+    "description": ""
+  },
+  {
+    "name": "superiorparietal",
+    "file": "superiorparietal.obj",
+    "description": ""
+  },
+  {
+    "name": "superiortemporal",
+    "file": "superiortemporal.obj",
+    "description": ""
+  },
+  { "name": "supramarginal", "file": "supramarginal.obj", "description": "" },
+  { "name": "temporalpole", "file": "temporalpole.obj", "description": "" },
+  {
+    "name": "transversetemporal",
+    "file": "transversetemporal.obj",
+    "description": ""
+  },
+  { "name": "unknown", "file": "unknown.obj", "description": "" }
+]

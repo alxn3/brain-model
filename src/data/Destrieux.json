@@ -1,0 +1,269 @@
+[
+  {
+    "name": "G_and_S_cingul-Ant",
+    "file": "G_and_S_cingul-Ant.obj",
+    "description": ""
+  },
+  {
+    "name": "G_and_S_cingul-Mid-Ant",
+    "file": "G_and_S_cingul-Mid-Ant.obj",
+    "description": ""
+  },
+  {
+    "name": "G_and_S_cingul-Mid-Post",
+    "file": "G_and_S_cingul-Mid-Post.obj",
+    "description": ""
+  },
+  {
+    "name": "G_and_S_frontomargin",
+    "file": "G_and_S_frontomargin.obj",
+    "description": ""
+  },
+  {
+    "name": "G_and_S_occipital_inf",
+    "file": "G_and_S_occipital_inf.obj",
+    "description": ""
+  },
+  {
+    "name": "G_and_S_paracentral",
+    "file": "G_and_S_paracentral.obj",
+    "description": ""
+  },
+  {
+    "name": "G_and_S_subcentral",
+    "file": "G_and_S_subcentral.obj",
+    "description": ""
+  },
+  {
+    "name": "G_and_S_transv_frontopol",
+    "file": "G_and_S_transv_frontopol.obj",
+    "description": ""
+  },
+  {
+    "name": "G_cingul-Post-dorsal",
+    "file": "G_cingul-Post-dorsal.obj",
+    "description": ""
+  },
+  {
+    "name": "G_cingul-Post-ventral",
+    "file": "G_cingul-Post-ventral.obj",
+    "description": ""
+  },
+  { "name": "G_cuneus", "file": "G_cuneus.obj", "description": "" },
+  {
+    "name": "G_front_inf-Opercular",
+    "file": "G_front_inf-Opercular.obj",
+    "description": ""
+  },
+  {
+    "name": "G_front_inf-Orbital",
+    "file": "G_front_inf-Orbital.obj",
+    "description": ""
+  },
+  {
+    "name": "G_front_inf-Triangul",
+    "file": "G_front_inf-Triangul.obj",
+    "description": ""
+  },
+  { "name": "G_front_middle", "file": "G_front_middle.obj", "description": "" },
+  { "name": "G_front_sup", "file": "G_front_sup.obj", "description": "" },
+  {
+    "name": "G_insular_short",
+    "file": "G_insular_short.obj",
+    "description": ""
+  },
+  {
+    "name": "G_Ins_lg_and_S_cent_ins",
+    "file": "G_Ins_lg_and_S_cent_ins.obj",
+    "description": ""
+  },
+  {
+    "name": "G_oc-temp_lat-fusifor",
+    "file": "G_oc-temp_lat-fusifor.obj",
+    "description": ""
+  },
+  {
+    "name": "G_oc-temp_med-Lingual",
+    "file": "G_oc-temp_med-Lingual.obj",
+    "description": ""
+  },
+  {
+    "name": "G_oc-temp_med-Parahip",
+    "file": "G_oc-temp_med-Parahip.obj",
+    "description": ""
+  },
+  {
+    "name": "G_occipital_middle",
+    "file": "G_occipital_middle.obj",
+    "description": ""
+  },
+  {
+    "name": "G_occipital_sup",
+    "file": "G_occipital_sup.obj",
+    "description": ""
+  },
+  { "name": "G_orbital", "file": "G_orbital.obj", "description": "" },
+  { "name": "G_parietal_sup", "file": "G_parietal_sup.obj", "description": "" },
+  {
+    "name": "G_pariet_inf-Angular",
+    "file": "G_pariet_inf-Angular.obj",
+    "description": ""
+  },
+  {
+    "name": "G_pariet_inf-Supramar",
+    "file": "G_pariet_inf-Supramar.obj",
+    "description": ""
+  },
+  { "name": "G_postcentral", "file": "G_postcentral.obj", "description": "" },
+  { "name": "G_precentral", "file": "G_precentral.obj", "description": "" },
+  { "name": "G_precuneus", "file": "G_precuneus.obj", "description": "" },
+  { "name": "G_rectus", "file": "G_rectus.obj", "description": "" },
+  { "name": "G_subcallosal", "file": "G_subcallosal.obj", "description": "" },
+  { "name": "G_temporal_inf", "file": "G_temporal_inf.obj", "description": "" },
+  {
+    "name": "G_temporal_middle",
+    "file": "G_temporal_middle.obj",
+    "description": ""
+  },
+  {
+    "name": "G_temp_sup-G_T_transv",
+    "file": "G_temp_sup-G_T_transv.obj",
+    "description": ""
+  },
+  {
+    "name": "G_temp_sup-Lateral",
+    "file": "G_temp_sup-Lateral.obj",
+    "description": ""
+  },
+  {
+    "name": "G_temp_sup-Plan_polar",
+    "file": "G_temp_sup-Plan_polar.obj",
+    "description": ""
+  },
+  {
+    "name": "G_temp_sup-Plan_tempo",
+    "file": "G_temp_sup-Plan_tempo.obj",
+    "description": ""
+  },
+  {
+    "name": "Lat_Fis-ant-Horizont",
+    "file": "Lat_Fis-ant-Horizont.obj",
+    "description": ""
+  },
+  {
+    "name": "Lat_Fis-ant-Vertical",
+    "file": "Lat_Fis-ant-Vertical.obj",
+    "description": ""
+  },
+  { "name": "Lat_Fis-post", "file": "Lat_Fis-post.obj", "description": "" },
+  { "name": "Pole_occipital", "file": "Pole_occipital.obj", "description": "" },
+  { "name": "Pole_temporal", "file": "Pole_temporal.obj", "description": "" },
+  { "name": "S_calcarine", "file": "S_calcarine.obj", "description": "" },
+  { "name": "S_central", "file": "S_central.obj", "description": "" },
+  {
+    "name": "S_cingul-Marginalis",
+    "file": "S_cingul-Marginalis.obj",
+    "description": ""
+  },
+  {
+    "name": "S_circular_insula_ant",
+    "file": "S_circular_insula_ant.obj",
+    "description": ""
+  },
+  {
+    "name": "S_circular_insula_inf",
+    "file": "S_circular_insula_inf.obj",
+    "description": ""
+  },
+  {
+    "name": "S_circular_insula_sup",
+    "file": "S_circular_insula_sup.obj",
+    "description": ""
+  },
+  {
+    "name": "S_collat_transv_ant",
+    "file": "S_collat_transv_ant.obj",
+    "description": ""
+  },
+  {
+    "name": "S_collat_transv_post",
+    "file": "S_collat_transv_post.obj",
+    "description": ""
+  },
+  { "name": "S_front_inf", "file": "S_front_inf.obj", "description": "" },
+  { "name": "S_front_middle", "file": "S_front_middle.obj", "description": "" },
+  { "name": "S_front_sup", "file": "S_front_sup.obj", "description": "" },
+  {
+    "name": "S_interm_prim-Jensen",
+    "file": "S_interm_prim-Jensen.obj",
+    "description": ""
+  },
+  {
+    "name": "S_intrapariet_and_P_trans",
+    "file": "S_intrapariet_and_P_trans.obj",
+    "description": ""
+  },
+  { "name": "S_oc-temp_lat", "file": "S_oc-temp_lat.obj", "description": "" },
+  {
+    "name": "S_oc-temp_med_and_Lingual",
+    "file": "S_oc-temp_med_and_Lingual.obj",
+    "description": ""
+  },
+  {
+    "name": "S_occipital_ant",
+    "file": "S_occipital_ant.obj",
+    "description": ""
+  },
+  {
+    "name": "S_oc_middle_and_Lunatus",
+    "file": "S_oc_middle_and_Lunatus.obj",
+    "description": ""
+  },
+  {
+    "name": "S_oc_sup_and_transversal",
+    "file": "S_oc_sup_and_transversal.obj",
+    "description": ""
+  },
+  {
+    "name": "S_orbital-H_Shaped",
+    "file": "S_orbital-H_Shaped.obj",
+    "description": ""
+  },
+  {
+    "name": "S_orbital_lateral",
+    "file": "S_orbital_lateral.obj",
+    "description": ""
+  },
+  {
+    "name": "S_orbital_med-olfact",
+    "file": "S_orbital_med-olfact.obj",
+    "description": ""
+  },
+  {
+    "name": "S_parieto_occipital",
+    "file": "S_parieto_occipital.obj",
+    "description": ""
+  },
+  { "name": "S_pericallosal", "file": "S_pericallosal.obj", "description": "" },
+  { "name": "S_postcentral", "file": "S_postcentral.obj", "description": "" },
+  {
+    "name": "S_precentral-inf-part",
+    "file": "S_precentral-inf-part.obj",
+    "description": ""
+  },
+  {
+    "name": "S_precentral-sup-part",
+    "file": "S_precentral-sup-part.obj",
+    "description": ""
+  },
+  { "name": "S_suborbital", "file": "S_suborbital.obj", "description": "" },
+  { "name": "S_subparietal", "file": "S_subparietal.obj", "description": "" },
+  { "name": "S_temporal_inf", "file": "S_temporal_inf.obj", "description": "" },
+  { "name": "S_temporal_sup", "file": "S_temporal_sup.obj", "description": "" },
+  {
+    "name": "S_temporal_transverse",
+    "file": "S_temporal_transverse.obj",
+    "description": ""
+  },
+  { "name": "Unknown", "file": "Unknown.obj", "description": "" }
+]
