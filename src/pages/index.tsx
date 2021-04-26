@@ -7,7 +7,9 @@ const Home: React.FC = () => {
         <title>Brain</title>
       </Head>
       <main>
-        <h1 className="text-4xl">Welcome to the Brain.</h1>
+        <div className="flex justify-center items-center">
+          <h1 className="text-4xl">Welcome to the Brain.</h1>
+        </div>
       </main>
     </div>
   );
