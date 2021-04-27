@@ -3,6 +3,7 @@ import BrainComponent from './braincomponent';
 import DK from 'data/DK.json';
 import DKT from 'data/DKT.json';
 import Destrieux from 'data/Destrieux.json';
+import Full from 'data/Full.json';
 import subcortical from 'data/subcortical.json';
 import { useRef, useState } from 'react';
 
@@ -16,7 +17,7 @@ type Props = {
   model: string;
   modelType: string;
 };
-const Model = { DK: DK, DKT: DKT, Destrieux: Destrieux, Full: 'Full' };
+const Model = { DK: DK, DKT: DKT, Destrieux: Destrieux, Full: Full };
 
 const setOpacity = (obj, opacity) => {
   obj.children.forEach((child) => {
@@ -43,7 +44,7 @@ const ModelScene = ({
   return (
     <>
       <group ref={cortexRef}>
-        {!cortexHidden &&
+        {!cortexHidden && model !== 'Full' ? (
           Model[model].map((obj) => {
             return (
               <>
@@ -69,7 +70,29 @@ const ModelScene = ({
                 />
               </>
             );
-          })}
+          })
+        ) : (
+          <>
+            <BrainComponent
+              key={`lh.${modelType}.obj`}
+              file={`models/${modelType}_${model}/lh.${modelType}.${Model[model][0].file}`}
+              onClick={() => {
+                setSelected(Model[model][0]);
+              }}
+              selected={Model[model][0].name == selected?.name}
+              opacity={cortexOpacity}
+            />
+            <BrainComponent
+              key={`rh.${modelType}.obj`}
+              file={`models/${modelType}_${model}/rh.${modelType}.${Model[model][1].file}`}
+              onClick={() => {
+                setSelected(Model[model][1]);
+              }}
+              selected={Model[model][1].name == selected?.name}
+              opacity={cortexOpacity}
+            />
+          </>
+        )}
       </group>
       <group ref={subcortexRef}>
         {!subcortexHidden &&

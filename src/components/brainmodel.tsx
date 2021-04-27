@@ -55,6 +55,7 @@ const BrainModel: React.FC = () => {
             <RadioOption id="DK" name="model" label="DK" defaultChecked />
             <RadioOption id="DKT" name="model" label="DKT" />
             <RadioOption id="Destrieux" name="model" label="Destrieux" />
+            <RadioOption id="Full" name="model" label="Full" />
           </OptionGroup>
           <OptionGroup
             name="Model Type"
