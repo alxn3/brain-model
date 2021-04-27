@@ -51,7 +51,7 @@ const BrainModel: React.FC = () => {
           <h1 className="text-black dark:text-white font-bold text-2xl">
             {selectedInfo?.alias ?? selected.name}
           </h1>
-          <p className="text-gray-800 dark:text-gray-200 text-lg font-light mt-2">
+          <p className="text-gray-900 dark:text-gray-200 text-lg font-light mt-2">
             {selectedInfo?.description ?? selected.description}
           </p>
         </div>
