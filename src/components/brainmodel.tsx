@@ -9,16 +9,99 @@ import {
   Vignette,
 } from '@react-three/postprocessing';
 import ModelScene from './modelscene';
+import {
+  OptionGroup,
+  RadioOption,
+  ToggleOption,
+  SliderOption,
+} from './settings';
 
 const BrainModel: React.FC = () => {
   const [selected, setSelected] = useState(null);
+  const [modelType, setModelType] = useState<string>('pial');
+  const [model, setModel] = useState('Destrieux');
+  const [cortexHidden, setCortexHidden] = useState(false);
+  const [subcortexHidden, setSubcortexHidden] = useState(false);
+  const [cortexOpacity, setCortexOpacity] = useState(0.7);
+  const [subcortexOpacity, setSubcortexOpacity] = useState(0.7);
+  const [settingsHidden, setSettingsHidden] = useState(false);
+
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-black">
       {selected && (
-        <div className="z-10 absolute bg-white p-8 rounded-md">
+        <div className="z-10 fixed bg-white p-8 rounded-md">
           <h1>{selected.name}</h1>
         </div>
       )}
+      <div className="fixed bottom-0 z-10 bg-gray-500 p-5 rounded-md bg-opacity-40">
+        <p
+          className="text-white opacity-50 text-center font-mono cursor-pointer"
+          onClick={() => setSettingsHidden(!settingsHidden)}
+        >
+          Toggle Settings
+        </p>
+        <div className={settingsHidden ? 'hidden' : 'space-y-5'}>
+          <OptionGroup
+            name="Model"
+            onChange={(event) => {
+              setModel(event.target.value);
+              console.log(model);
+            }}
+          >
+            <RadioOption id="DK" name="model" label="DK" />
+            <RadioOption id="DKT" name="model" label="DKT" />
+            <RadioOption
+              id="Destrieux"
+              name="model"
+              label="Destrieux"
+              defaultChecked
+            />
+          </OptionGroup>
+          <OptionGroup
+            name="Model Type"
+            onChange={(event) => {
+              setModelType(event.target.value);
+              console.log(modelType);
+            }}
+          >
+            <RadioOption id="inflated" name="type" label="Inflated" />
+            <RadioOption id="pial" name="type" label="Pial" defaultChecked />
+            <RadioOption id="white" name="type" label="White" />
+          </OptionGroup>
+          <OptionGroup name="Other">
+            <ToggleOption
+              id="hidecortex"
+              label="Hide Cortex"
+              checked={cortexHidden}
+              setChecked={setCortexHidden}
+            />
+            <ToggleOption
+              id="hidesubcortex"
+              label="Hide Subcortex"
+              checked={subcortexHidden}
+              setChecked={setSubcortexHidden}
+            />
+            <SliderOption
+              id="cortexopacity"
+              label="Cortex Opacity"
+              min={0}
+              max={1}
+              defaultValue={cortexOpacity}
+              step={0.01}
+              onChange={(event) => setCortexOpacity(event.target.value)}
+            />
+            <SliderOption
+              id="subcortexopacity"
+              label="Subcortex Opacity"
+              min={0}
+              max={1}
+              defaultValue={subcortexOpacity}
+              step={0.01}
+              onChange={(event) => setSubcortexOpacity(event.target.value)}
+            />
+          </OptionGroup>
+        </div>
+      </div>
       <Canvas>
         <ambientLight />
         <color attach="background" args={['#050505']} />
@@ -34,7 +117,16 @@ const BrainModel: React.FC = () => {
             opacity={0.5}
           />
           <Suspense fallback={null}>
-            <ModelScene selected={selected} setSelected={setSelected} />
+            <ModelScene
+              selected={selected}
+              setSelected={setSelected}
+              model={model}
+              modelType={modelType}
+              cortexHidden={cortexHidden}
+              subcortexHidden={subcortexHidden}
+              cortexOpacity={cortexOpacity}
+              subcortexOpacity={subcortexOpacity}
+            />
           </Suspense>
           <Noise opacity={0.0125} />
           <Vignette eskil={false} offset={0.1} darkness={1.1} />

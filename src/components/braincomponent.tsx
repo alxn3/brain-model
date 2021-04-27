@@ -8,6 +8,7 @@ type Props = {
   onClick: () => void;
   selected: boolean;
   meshProps?: any;
+  opacity?: number;
 };
 
 const BrainComponent: React.FC<Props> = ({
@@ -15,6 +16,7 @@ const BrainComponent: React.FC<Props> = ({
   onClick,
   selected,
   meshProps,
+  opacity = 0.7
 }) => {
   const [geometry, setGeometry] = useState();
   const [color, setColor] = useState(
@@ -45,7 +47,7 @@ const BrainComponent: React.FC<Props> = ({
     >
       <meshStandardMaterial
         color={selected ? selectedColor : color}
-        opacity={selected ? 1 :0.5}
+        opacity={selected ? 1 : opacity}
         transparent
       />
     </mesh>
