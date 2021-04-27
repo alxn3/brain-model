@@ -18,6 +18,8 @@ import {
 import Info from 'data/Info.json';
 import { useTheme } from 'next-themes';
 import ThemeToggle from './themetoggle';
+import SelectOption from './settings/selectoption';
+import * as THREE from 'three';
 
 const BrainModel: React.FC = () => {
   const [selected, setSelected] = useState(null);
@@ -28,6 +30,9 @@ const BrainModel: React.FC = () => {
   const [cortexOpacity, setCortexOpacity] = useState(0.7);
   const [subcortexOpacity, setSubcortexOpacity] = useState(0.7);
   const [settingsHidden, setSettingsHidden] = useState(false);
+  const [materialType, setMaterialType] = useState(
+    THREE.MeshStandardMaterial.toString()
+  );
   const { theme } = useTheme();
 
   const selectedInfo = selected
@@ -61,6 +66,7 @@ const BrainModel: React.FC = () => {
         <div className={settingsHidden ? 'hidden' : 'space-y-5'}>
           <OptionGroup
             name="Model"
+            contentClassName="space-x-2"
             onChange={(event) => {
               setModel((event.target as HTMLInputElement).value);
               console.log(model);
@@ -73,6 +79,7 @@ const BrainModel: React.FC = () => {
           </OptionGroup>
           <OptionGroup
             name="Model Type"
+            contentClassName="space-x-2"
             onChange={(event) => {
               setModelType((event.target as HTMLInputElement).value);
               console.log(modelType);
@@ -84,6 +91,7 @@ const BrainModel: React.FC = () => {
           </OptionGroup>
           <OptionGroup name="Other">
             <ToggleOption
+              className="mr-2"
               id="hidecortex"
               label="Hide Cortex"
               checked={cortexHidden}
@@ -96,6 +104,7 @@ const BrainModel: React.FC = () => {
               setChecked={setSubcortexHidden}
             />
             <SliderOption
+              className="mt-2"
               id="cortexopacity"
               label="Cortex Opacity"
               min={0}
@@ -121,13 +130,36 @@ const BrainModel: React.FC = () => {
                 )
               }
             />
+            <SelectOption
+              label="Shader Material"
+              value={materialType}
+              onChange={(event) =>
+                setMaterialType((event.target as HTMLInputElement).value)
+              }
+            >
+              <option value={THREE.MeshStandardMaterial.toString()}>
+                meshStandardMaterial
+              </option>
+              <option value={THREE.MeshDepthMaterial.toString()}>
+                meshDepthMaterial
+              </option>
+              <option value={THREE.MeshNormalMaterial.toString()}>
+                meshNormalMaterial
+              </option>
+              <option value={THREE.MeshToonMaterial.toString()}>
+                meshToonMaterial
+              </option>
+            </SelectOption>
             <ThemeToggle />
           </OptionGroup>
         </div>
       </div>
       <Canvas>
         <ambientLight />
-        <color attach="background" args={theme === 'dark' ? ['#050505'] : ['#FAFAFA']} />
+        <color
+          attach="background"
+          args={theme === 'dark' ? ['#050505'] : ['#FAFAFA']}
+        />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <pointLight position={[-10, -10, -10]} />
         <PerspectiveCamera makeDefault position={[0, 0, 300]} />
@@ -139,18 +171,23 @@ const BrainModel: React.FC = () => {
             height={50}
             opacity={0.3}
           />
-            <ModelScene
-              selected={selected}
-              setSelected={setSelected}
-              model={model}
-              modelType={modelType}
-              cortexHidden={cortexHidden}
-              subcortexHidden={subcortexHidden}
-              cortexOpacity={cortexOpacity}
-              subcortexOpacity={subcortexOpacity}
-            />
+          <ModelScene
+            selected={selected}
+            setSelected={setSelected}
+            model={model}
+            modelType={modelType}
+            cortexHidden={cortexHidden}
+            subcortexHidden={subcortexHidden}
+            cortexOpacity={cortexOpacity}
+            subcortexOpacity={subcortexOpacity}
+            materialType={materialType}
+          />
           <Noise opacity={0.0125} />
-          <Vignette eskil={false} offset={0.1} darkness={theme==='dark' ? 1.1 : 0.5} />
+          <Vignette
+            eskil={false}
+            offset={0.1}
+            darkness={theme === 'dark' ? 1.1 : 0.5}
+          />
         </EffectComposer>
       </Canvas>
     </div>

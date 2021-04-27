@@ -16,6 +16,7 @@ type Props = {
   subcortexOpacity: number;
   model: string;
   modelType: string;
+  materialType: string;
 };
 const Model = { DK: DK, DKT: DKT, Destrieux: Destrieux, Full: Full };
 
@@ -37,6 +38,7 @@ const ModelScene = ({
   subcortexOpacity,
   model,
   modelType,
+  materialType,
 }) => {
   const cortexRef = useRef();
   const subcortexRef = useRef();
@@ -59,6 +61,7 @@ const ModelScene = ({
                       }}
                       selected={obj.file == selected?.file}
                       opacity={cortexOpacity}
+                      materialType={materialType}
                     />
                   </Suspense>
                   <Suspense fallback={null}>
@@ -71,6 +74,7 @@ const ModelScene = ({
                       }}
                       selected={obj.file == selected?.file}
                       opacity={cortexOpacity}
+                      materialType={materialType}
                     />
                   </Suspense>
                 </>
@@ -86,6 +90,7 @@ const ModelScene = ({
                 }}
                 selected={Model[model][0].name == selected?.name}
                 opacity={cortexOpacity}
+                materialType={materialType}
               />
               <BrainComponent
                 key={`rh.${modelType}.obj`}
@@ -95,6 +100,7 @@ const ModelScene = ({
                 }}
                 selected={Model[model][1].name == selected?.name}
                 opacity={cortexOpacity}
+                materialType={materialType}
               />
             </Suspense>
           ))}
@@ -113,6 +119,7 @@ const ModelScene = ({
                   }}
                   selected={obj.file == selected?.file}
                   opacity={subcortexOpacity}
+                  materialType={materialType}
                 />
               </Suspense>
             );

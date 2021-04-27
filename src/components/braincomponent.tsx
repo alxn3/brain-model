@@ -9,6 +9,7 @@ type Props = {
   selected: boolean;
   meshProps?: any;
   opacity?: number;
+  materialType?: string;
 };
 
 const BrainComponent: React.FC<Props> = ({
@@ -16,7 +17,8 @@ const BrainComponent: React.FC<Props> = ({
   onClick,
   selected,
   meshProps,
-  opacity = 0.7
+  opacity = 0.7,
+  materialType = THREE.MeshStandardMaterial.toString(),
 }) => {
   const randomHue = Math.random();
   const [geometry, setGeometry] = useState();
@@ -36,6 +38,36 @@ const BrainComponent: React.FC<Props> = ({
       });
     }
   }, [file]);
+
+  const materialSwitch = () => {
+    switch (materialType) {
+      case THREE.MeshStandardMaterial.toString():
+        return (
+          <meshStandardMaterial
+            color={selected ? selectedColor : color}
+            opacity={selected ? 1 : opacity}
+            transparent
+          />
+        );
+      case THREE.MeshDepthMaterial.toString():
+        return (
+          <meshDepthMaterial opacity={selected ? 1 : opacity} transparent />
+        );
+      case THREE.MeshNormalMaterial.toString():
+        return (
+          <meshNormalMaterial opacity={selected ? 1 : opacity} transparent />
+        );
+      case THREE.MeshToonMaterial.toString():
+        return (
+          <meshToonMaterial
+            color={selected ? selectedColor : color}
+            opacity={selected ? 1 : opacity}
+            transparent
+          />
+        );
+    }
+  };
+
   return (
     <mesh
       onClick={(e) => {
@@ -46,11 +78,7 @@ const BrainComponent: React.FC<Props> = ({
       {...meshProps}
       geometry={geometry}
     >
-      <meshStandardMaterial
-        color={selected ? selectedColor : color}
-        opacity={selected ? 1 : opacity}
-        transparent
-      />
+      {materialSwitch()}
     </mesh>
   );
 };
