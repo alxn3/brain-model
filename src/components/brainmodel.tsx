@@ -16,6 +16,8 @@ import {
   SliderOption,
 } from './settings';
 import Info from 'data/Info.json';
+import { useTheme } from 'next-themes';
+import ThemeToggle from './themetoggle';
 
 const BrainModel: React.FC = () => {
   const [selected, setSelected] = useState(null);
@@ -26,6 +28,7 @@ const BrainModel: React.FC = () => {
   const [cortexOpacity, setCortexOpacity] = useState(0.7);
   const [subcortexOpacity, setSubcortexOpacity] = useState(0.7);
   const [settingsHidden, setSettingsHidden] = useState(false);
+  const { theme } = useTheme();
 
   const selectedInfo = selected
     ? Info[
@@ -36,21 +39,21 @@ const BrainModel: React.FC = () => {
       ]
     : null;
   return (
-    <div className="h-screen bg-black">
+    <div className="h-screen bg-black transition-colors">
       {selected && (
-        <div className="z-10 fixed bg-gray-800 px-6 py-4 rounded-md bg-opacity-40 max-w-md">
+        <div className="z-10 fixed bg-white dark:bg-gray-800 px-6 py-4 rounded-md bg-opacity-40 max-w-md">
           <p className="font-mono text-lg text-red-500">selected</p>
-          <h1 className="text-white font-bold text-2xl">{selectedInfo?.alias ?? selected.name}</h1>
-          <p className="text-gray-200 text-lg font-light mt-2">
-            {
-              selectedInfo?.description ?? selected.description
-            }
+          <h1 className="text-black dark:text-white font-bold text-2xl">
+            {selectedInfo?.alias ?? selected.name}
+          </h1>
+          <p className="text-gray-800 dark:text-gray-200 text-lg font-light mt-2">
+            {selectedInfo?.description ?? selected.description}
           </p>
         </div>
       )}
-      <div className="fixed bottom-0 z-10 bg-gray-800 p-5 rounded-md bg-opacity-40">
+      <div className="fixed bottom-0 z-10 bg-white dark:bg-gray-800 p-5 rounded-md bg-opacity-40">
         <p
-          className="text-white opacity-50 text-center font-mono cursor-pointer"
+          className="text-black dark:text-white opacity-50 text-center font-mono cursor-pointer"
           onClick={() => setSettingsHidden(!settingsHidden)}
         >
           Toggle Settings
@@ -118,12 +121,13 @@ const BrainModel: React.FC = () => {
                 )
               }
             />
+            <ThemeToggle />
           </OptionGroup>
         </div>
       </div>
       <Canvas>
         <ambientLight />
-        <color attach="background" args={['#050505']} />
+        <color attach="background" args={theme === 'dark' ? ['#050505'] : ['#FAFAFA']} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <pointLight position={[-10, -10, -10]} />
         <PerspectiveCamera makeDefault position={[0, 0, 300]} />
@@ -148,7 +152,7 @@ const BrainModel: React.FC = () => {
             />
           </Suspense>
           <Noise opacity={0.0125} />
-          <Vignette eskil={false} offset={0.1} darkness={1.1} />
+          <Vignette eskil={false} offset={0.1} darkness={theme==='dark' ? 1.1 : 0.5} />
         </EffectComposer>
       </Canvas>
     </div>

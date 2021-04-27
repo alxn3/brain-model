@@ -24,7 +24,7 @@ const ToggleOption: React.FC<ToggleOptionProps> = ({
       />
       <label
         htmlFor={id}
-        className="font-normal inline-block font-mono text-white text-lg bg-gray-800 p-1 rounded-md label-checked:bg-red-500"
+        className="font-normal inline-block font-mono text-black dark:text-white text-lg bg-gray-200 dark:bg-gray-800 p-1 rounded-md label-checked:bg-red-500"
       >
         {label}
       </label>

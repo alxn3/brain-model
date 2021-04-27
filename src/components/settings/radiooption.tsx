@@ -18,7 +18,7 @@ const RadioOption: React.FC<RadioOptionProps> = ({ id, name, label, defaultCheck
       />
       <label
         htmlFor={id}
-        className="font-light font-mono text-white text-xl inline-block bg-gray-800 p-2 rounded-md label-checked:bg-red-500"
+        className="font-light font-mono text-black dark:text-white text-xl inline-block bg-gray-200 dark:bg-gray-800 p-2 rounded-md label-checked:bg-red-500"
       >
         {label}
       </label>

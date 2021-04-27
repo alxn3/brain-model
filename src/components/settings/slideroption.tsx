@@ -21,12 +21,12 @@ const ToggleOption: React.FC<SliderOptionProps> = ({
 }) => {
   return (
     <div>
-      <label htmlFor={id} className="font-normal font-mono text-white text-lg ">
+      <label htmlFor={id} className="font-normal font-mono text-dark dark:text-white text-lg ">
         {label}
       </label>
       <input
         type="range"
-        className="block w-full h-6 text-red-300"
+        className="block w-full h-6"
         id={id}
         min={min}
         step={step}

@@ -15,7 +15,7 @@ const OptionGroup: React.FC<OptionGroupProps> = ({
 }) => {
   return (
     <div className={className}>
-      <h1 className="text-xl font-mono text-white">{name}</h1>
+      <h1 className="text-xl font-mono text-black dark:text-white">{name}</h1>
       <div className="space-x-2" onChange={onChange}>
         {children}
       </div>
