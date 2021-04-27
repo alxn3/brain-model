@@ -35,7 +35,7 @@ const BrainComponent: React.FC<Props> = ({
         }
       });
     }
-  }, []);
+  }, [file]);
   return (
     <mesh
       onClick={(e) => {
