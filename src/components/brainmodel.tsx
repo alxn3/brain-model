@@ -19,7 +19,7 @@ import {
 const BrainModel: React.FC = () => {
   const [selected, setSelected] = useState(null);
   const [modelType, setModelType] = useState<string>('pial');
-  const [model, setModel] = useState('Destrieux');
+  const [model, setModel] = useState('DK');
   const [cortexHidden, setCortexHidden] = useState(false);
   const [subcortexHidden, setSubcortexHidden] = useState(false);
   const [cortexOpacity, setCortexOpacity] = useState(0.7);
@@ -29,9 +29,10 @@ const BrainModel: React.FC = () => {
   return (
     <div className="h-screen bg-black">
       {selected && (
-        <div className="z-10 fixed bg-gray-800 px-6 py-4 rounded-md bg-opacity-40">
+        <div className="z-10 fixed bg-gray-800 px-6 py-4 rounded-md bg-opacity-40 max-w-md">
           <p className="font-mono text-lg text-red-500">selected</p>
           <h1 className="text-white font-bold text-2xl">{selected.name}</h1>
+          <p className="text-gray-200 text-lg font-light mt-2">{selected.description}</p>
         </div>
       )}
       <div className="fixed bottom-0 z-10 bg-gray-800 p-5 rounded-md bg-opacity-40">

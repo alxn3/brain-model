@@ -1,109 +1,173 @@
 [
-  { "name": "bankssts", "file": "bankssts.obj", "description": "" },
   {
-    "name": "caudalanteriorcingulate",
+    "name": "Superior temporal sulcus",
+    "file": "bankssts.obj",
+    "description": "auditory processing, including language, but also has been implicated as a critical structure in social cognition"
+  },
+  {
+    "name": "Anterior cingulate cortex",
     "file": "caudalanteriorcingulate.obj",
-    "description": ""
+    "description": "several complex cognitive functions, such as empathy, impulse control, emotion, and decision-making."
   },
   {
-    "name": "caudalmiddlefrontal",
+    "name": "Middle frontal gyrus",
     "file": "caudalmiddlefrontal.obj",
-    "description": ""
+    "description": "the dominant (left) middle frontal gyrus plays a key role in the development of literacy, while the nondominant (right) middle frontal gyrus is responsible for numeracy."
   },
-  { "name": "cuneus", "file": "cuneus.obj", "description": "" },
-  { "name": "entorhinal", "file": "entorhinal.obj", "description": "" },
-  { "name": "frontalpole", "file": "frontalpole.obj", "description": "" },
-  { "name": "fusiform", "file": "fusiform.obj", "description": "" },
   {
-    "name": "inferiorparietal",
+    "name": "Cuneus",
+    "file": "cuneus.obj",
+    "description": "a structure in the visual cortex that plays an important role in the identification and recognition of words."
+  },
+  {
+    "name": "Entorhinal cortex",
+    "file": "entorhinal.obj",
+    "description": "the gateway for information entering and leaving the hippocampal formation."
+  },
+  {
+    "name": "Frontal pole",
+    "file": "frontalpole.obj",
+    "description": "the function of frontal pole neurons is to monitor action outcomes."
+  },
+  {
+    "name": "Fusiform gyrus",
+    "file": "fusiform.obj",
+    "description": "plays important roles in object and face recognition, and recognition of facial expressions"
+  },
+  {
+    "name": "Inferior parietal lobule",
     "file": "inferiorparietal.obj",
-    "description": ""
+    "description": "concerned with language, mathematical operations, and body image, particularly the supramarginal gyrus and the angular gyrus."
   },
   {
-    "name": "inferiortemporal",
+    "name": "Inferior temporal gyrus",
     "file": "inferiortemporal.obj",
-    "description": ""
+    "description": "crucial for visual object recognition and is considered to be the final stage in the ventral cortical visual system."
   },
-  { "name": "insula", "file": "insula.obj", "description": "" },
   {
-    "name": "isthmuscingulate",
+    "name": "Insular cortex",
+    "file": "insula.obj",
+    "description": "plays a role in a variety of homeostatic functions related to basic survival needs, such as taste, visceral sensation, and autonomic control."
+  },
+  {
+    "name": "Isthmus of cingulate gyrus",
     "file": "isthmuscingulate.obj",
-    "description": ""
+    "description": "an integral part of the limbic system, which is involved with emotion formation and processing, learning, and memory."
   },
   {
-    "name": "lateraloccipital",
+    "name": "Lateral occipital sulcus",
     "file": "lateraloccipital.obj",
-    "description": ""
+    "description": "divides the lateral, or middle occipital gyrus into a superior and an inferior part, which are then continuous in front with the parietal and temporal lobes."
   },
   {
-    "name": "lateralorbitofrontal",
+    "name": "Lateral orbitofrontal cortex",
     "file": "lateralorbitofrontal.obj",
-    "description": ""
+    "description": "non-reward and punishment."
   },
-  { "name": "lingual", "file": "lingual.obj", "description": "" },
   {
-    "name": "medialorbitofrontal",
+    "name": "Lingual gyrus",
+    "file": "lingual.obj",
+    "description": "linked to processing vision, especially related to letters."
+  },
+  {
+    "name": "Medial orbitofrontal cortex",
     "file": "medialorbitofrontal.obj",
-    "description": ""
+    "description": "represents emotion and reward in decision making."
   },
-  { "name": "middletemporal", "file": "middletemporal.obj", "description": "" },
-  { "name": "paracentral", "file": "paracentral.obj", "description": "" },
   {
-    "name": "parahippocampal",
+    "name": "Middle temporal gyrus",
+    "file": "middletemporal.obj",
+    "description": " involved in a number of cognitive processes, including semantic memory processing, language processes, and integrating information from different senses."
+  },
+  {
+    "name": "Paracentral lobule",
+    "file": "paracentral.obj",
+    "description": "controls motor and sensory innervations of the contralateral lower extremity. It is also responsible for control of defecation and urination."
+  },
+  {
+    "name": "Parahippocampal gyrus",
     "file": "parahippocampal.obj",
-    "description": ""
+    "description": "plays an important role in memory encoding and retrieval."
   },
   {
-    "name": "parsopercularis",
+    "name": "Pars opercularis",
     "file": "parsopercularis.obj",
-    "description": ""
+    "description": "involved in language production and phonological processing due to its connections with motor areas of the mouth and tongue."
   },
-  { "name": "parsorbitalis", "file": "parsorbitalis.obj", "description": "" },
   {
-    "name": "parstriangularis",
+    "name": "Pars orbitalis",
+    "file": "parsorbitalis.obj",
+    "description": "plays a role in the language processing network of the brain."
+  },
+  {
+    "name": "Pars triangularis",
     "file": "parstriangularis.obj",
-    "description": ""
+    "description": "most commonly associated with Broca's area and is well known in its involvement in speech production."
   },
-  { "name": "pericalcarine", "file": "pericalcarine.obj", "description": "" },
-  { "name": "postcentral", "file": "postcentral.obj", "description": "" },
   {
-    "name": "posteriorcingulate",
+    "name": "Pericalcarine cortex",
+    "file": "pericalcarine.obj",
+    "description": "vision."
+  },
+  {
+    "name": "Postcentral gyrus",
+    "file": "postcentral.obj",
+    "description": "processes sensory information such as touch and information about where the body is and which direction it is moving."
+  },
+  {
+    "name": "Posterior cingulate cortex",
     "file": "posteriorcingulate.obj",
-    "description": ""
+    "description": "highly connected and one of the most metabolically active regions in the brain, but there is no consensus as to its cognitive role."
   },
-  { "name": "precentral", "file": "precentral.obj", "description": "" },
-  { "name": "precuneus", "file": "precuneus.obj", "description": "" },
   {
-    "name": "rostralanteriorcingulate",
+    "name": "Precentral gyrus",
+    "file": "precentral.obj",
+    "description": "known as the motor strip or primary motor cortex, is the part of the brain's neocortex responsible for executing voluntary movements."
+  },
+  {
+    "name": "Precuneus",
+    "file": "precuneus.obj",
+    "description": "involved with episodic memory, visuospatial processing, reflections upon self, and aspects of consciousness."
+  },
+  {
+    "name": "Rostral anterior cingulate cortex",
     "file": "rostralanteriorcingulate.obj",
-    "description": ""
+    "description": "ideally positioned between limbic and cortical structures to integrate emotion and cognition and is thereby primed to influence amygdala-dependent learning."
   },
   {
-    "name": "rostralmiddlefrontal",
+    "name": "Rostral Middle Frontal Gyrus",
     "file": "rostralmiddlefrontal.obj",
-    "description": ""
+    "description": "Uncertain."
   },
   {
-    "name": "superiorfrontal",
+    "name": "Superior frontal gyrus",
     "file": "superiorfrontal.obj",
-    "description": ""
+    "description": "contributes to higher cognitive functions and particularly to working memory (WM), although the nature of its involvement remains a matter of debate."
   },
   {
-    "name": "superiorparietal",
+    "name": "Superior parietal lobe",
     "file": "superiorparietal.obj",
-    "description": ""
+    "description": "involved with spatial orientation, and receives a great deal of visual input as well as sensory input from one's hand."
   },
   {
-    "name": "superiortemporal",
+    "name": "Superior temporal gyrus",
     "file": "superiortemporal.obj",
-    "description": ""
+    "description": "involved in auditory processing, including language, but also has been implicated as a critical structure in social cognition."
   },
-  { "name": "supramarginal", "file": "supramarginal.obj", "description": "" },
-  { "name": "temporalpole", "file": "temporalpole.obj", "description": "" },
   {
-    "name": "transversetemporal",
-    "file": "transversetemporal.obj",
-    "description": ""
+    "name": "Supramarginal gyrus",
+    "file": "supramarginal.obj",
+    "description": "plays a role in phonological processing (i.e. of spoken and written language) and emotional responses."
   },
-  { "name": "unknown", "file": "unknown.obj", "description": "" }
+  {
+    "name": "Temporal pole",
+    "file": "temporalpole.obj",
+    "description": "has some role in both social and emotional processes, including face recognition and theory of mind, that goes beyond semantic memory."
+  },
+  {
+    "name": "Transverse temporal gyrus",
+    "file": "transversetemporal.obj",
+    "description": "the first cortical structures to process incoming auditory information."
+  },
+  { "name": "Unknown", "file": "unknown.obj", "description": "oh what's this?" }
 ]
