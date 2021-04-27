@@ -15,6 +15,7 @@ import {
   ToggleOption,
   SliderOption,
 } from './settings';
+import Info from 'data/Info.json';
 
 const BrainModel: React.FC = () => {
   const [selected, setSelected] = useState(null);
@@ -26,14 +27,24 @@ const BrainModel: React.FC = () => {
   const [subcortexOpacity, setSubcortexOpacity] = useState(0.7);
   const [settingsHidden, setSettingsHidden] = useState(false);
 
+  const selectedInfo = selected
+    ? Info[
+        (selected.file as string).slice(
+          0,
+          (selected.file as string).lastIndexOf('.')
+        )
+      ]
+    : null;
   return (
     <div className="h-screen bg-black">
       {selected && (
         <div className="z-10 fixed bg-gray-800 px-6 py-4 rounded-md bg-opacity-40 max-w-md">
           <p className="font-mono text-lg text-red-500">selected</p>
-          <h1 className="text-white font-bold text-2xl">{selected.name}</h1>
+          <h1 className="text-white font-bold text-2xl">{selectedInfo?.alias ?? selected.name}</h1>
           <p className="text-gray-200 text-lg font-light mt-2">
-            {selected.description}
+            {
+              selectedInfo?.description ?? selected.description
+            }
           </p>
         </div>
       )}
