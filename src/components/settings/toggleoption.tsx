@@ -3,6 +3,7 @@ import { Dispatch } from 'react';
 type ToggleOptionProps = {
   id: string;
   label: string;
+  className?: string;
   checked: boolean;
   setChecked: Dispatch<any>;
 };
@@ -10,11 +11,12 @@ type ToggleOptionProps = {
 const ToggleOption: React.FC<ToggleOptionProps> = ({
   id,
   label,
+  className,
   checked,
   setChecked,
 }) => {
   return (
-    <div className="inline-block">
+    <div className={`inline-block ${className}`.trim()}>
       <input
         type="checkbox"
         className="form-checkbox opacity-0 fixed w-0"

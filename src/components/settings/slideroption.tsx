@@ -8,6 +8,7 @@ type SliderOptionProps = {
   max?: number;
   step?: number;
   onChange?: FormEventHandler<HTMLElement>;
+  className?: string;
 };
 
 const ToggleOption: React.FC<SliderOptionProps> = ({
@@ -17,11 +18,12 @@ const ToggleOption: React.FC<SliderOptionProps> = ({
   max = 100,
   step = 1,
   defaultValue,
-  onChange
+  onChange,
+  className
 }) => {
   return (
-    <div>
-      <label htmlFor={id} className="font-normal font-mono text-dark dark:text-white text-lg ">
+    <div className={className}>
+      <label htmlFor={id} className="font-normal font-mono text-dark dark:text-white text-lg">
         {label}
       </label>
       <input
