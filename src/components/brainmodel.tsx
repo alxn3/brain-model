@@ -32,7 +32,9 @@ const BrainModel: React.FC = () => {
         <div className="z-10 fixed bg-gray-800 px-6 py-4 rounded-md bg-opacity-40 max-w-md">
           <p className="font-mono text-lg text-red-500">selected</p>
           <h1 className="text-white font-bold text-2xl">{selected.name}</h1>
-          <p className="text-gray-200 text-lg font-light mt-2">{selected.description}</p>
+          <p className="text-gray-200 text-lg font-light mt-2">
+            {selected.description}
+          </p>
         </div>
       )}
       <div className="fixed bottom-0 z-10 bg-gray-800 p-5 rounded-md bg-opacity-40">
@@ -50,14 +52,9 @@ const BrainModel: React.FC = () => {
               console.log(model);
             }}
           >
-            <RadioOption id="DK" name="model" label="DK" />
+            <RadioOption id="DK" name="model" label="DK" defaultChecked />
             <RadioOption id="DKT" name="model" label="DKT" />
-            <RadioOption
-              id="Destrieux"
-              name="model"
-              label="Destrieux"
-              defaultChecked
-            />
+            <RadioOption id="Destrieux" name="model" label="Destrieux" />
           </OptionGroup>
           <OptionGroup
             name="Model Type"
