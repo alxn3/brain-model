@@ -111,7 +111,7 @@ const BrainModel: React.FC = () => {
           </OptionGroup>
         </div>
       </div>
-      {/* <Canvas>
+      <Canvas>
         <ambientLight />
         <color attach="background" args={['#050505']} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -140,7 +140,7 @@ const BrainModel: React.FC = () => {
           <Noise opacity={0.0125} />
           <Vignette eskil={false} offset={0.1} darkness={1.1} />
         </EffectComposer>
-      </Canvas> */}
+      </Canvas>
     </div>
   );
 };
