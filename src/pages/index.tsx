@@ -20,7 +20,7 @@ const Home: React.FC = () => {
                 BEGIN
               </button>
             </Link>
-            <p className="text-black dark:text-white font-light text-lg mt-16 opacity-30 hover:opacity-100 transition-opacity">
+            <p className="text-black dark:text-white font-light text-lg mt-16 opacity-40 hover:opacity-100 transition-opacity">
               Website created by Alex Lin. |{' '}
               <a
                 className="hover:text-red-300 font-normal cursor-pointer hover:underline"
