@@ -28,12 +28,13 @@ const BrainModel: React.FC = () => {
 
   return (
     <div className="h-screen bg-black">
-      {selected && (
-        <div className="z-10 fixed bg-white p-8 rounded-md">
-          <h1>{selected.name}</h1>
+      { (
+        <div className="z-10 fixed bg-gray-800 px-6 py-4 rounded-md bg-opacity-40">
+          <p className="font-mono text-lg text-red-500">selected</p>
+          <h1 className="text-white font-bold text-2xl">{selected.name}</h1>
         </div>
       )}
-      <div className="fixed bottom-0 z-10 bg-gray-500 p-5 rounded-md bg-opacity-40">
+      <div className="fixed bottom-0 z-10 bg-gray-800 p-5 rounded-md bg-opacity-40">
         <p
           className="text-white opacity-50 text-center font-mono cursor-pointer"
           onClick={() => setSettingsHidden(!settingsHidden)}
@@ -44,7 +45,7 @@ const BrainModel: React.FC = () => {
           <OptionGroup
             name="Model"
             onChange={(event) => {
-              setModel(event.target.value);
+              setModel((event.target as HTMLInputElement).value);
               console.log(model);
             }}
           >
@@ -60,7 +61,7 @@ const BrainModel: React.FC = () => {
           <OptionGroup
             name="Model Type"
             onChange={(event) => {
-              setModelType(event.target.value);
+              setModelType((event.target as HTMLInputElement).value);
               console.log(modelType);
             }}
           >
@@ -88,7 +89,7 @@ const BrainModel: React.FC = () => {
               max={1}
               defaultValue={cortexOpacity}
               step={0.01}
-              onChange={(event) => setCortexOpacity(event.target.value)}
+              onChange={(event) => setCortexOpacity(Number((event.target as HTMLInputElement).value))}
             />
             <SliderOption
               id="subcortexopacity"
@@ -97,12 +98,12 @@ const BrainModel: React.FC = () => {
               max={1}
               defaultValue={subcortexOpacity}
               step={0.01}
-              onChange={(event) => setSubcortexOpacity(event.target.value)}
+              onChange={(event) => setSubcortexOpacity(Number((event.target as HTMLInputElement).value))}
             />
           </OptionGroup>
         </div>
       </div>
-      <Canvas>
+      {/* <Canvas>
         <ambientLight />
         <color attach="background" args={['#050505']} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -131,7 +132,7 @@ const BrainModel: React.FC = () => {
           <Noise opacity={0.0125} />
           <Vignette eskil={false} offset={0.1} darkness={1.1} />
         </EffectComposer>
-      </Canvas>
+      </Canvas> */}
     </div>
   );
 };

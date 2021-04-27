@@ -18,12 +18,13 @@ const BrainComponent: React.FC<Props> = ({
   meshProps,
   opacity = 0.7
 }) => {
+  const randomHue = Math.random();
   const [geometry, setGeometry] = useState();
   const [color, setColor] = useState(
-    new THREE.Color().setHSL(Math.random(), 0.5, 0.25)
+    new THREE.Color().setHSL(randomHue, 0.5, 0.25)
   );
   const [selectedColor, setSelectedColor] = useState(
-    new THREE.Color().setHSL(color.getHSL().h, 0.7, 0.55)
+    new THREE.Color().setHSL(randomHue, 0.7, 0.55)
   );
   const obj = useLoader(OBJLoader, file);
   useEffect(() => {
