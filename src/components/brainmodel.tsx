@@ -28,7 +28,7 @@ const BrainModel: React.FC = () => {
 
   return (
     <div className="h-screen bg-black">
-      { (
+      {selected && (
         <div className="z-10 fixed bg-gray-800 px-6 py-4 rounded-md bg-opacity-40">
           <p className="font-mono text-lg text-red-500">selected</p>
           <h1 className="text-white font-bold text-2xl">{selected.name}</h1>
@@ -89,7 +89,11 @@ const BrainModel: React.FC = () => {
               max={1}
               defaultValue={cortexOpacity}
               step={0.01}
-              onChange={(event) => setCortexOpacity(Number((event.target as HTMLInputElement).value))}
+              onChange={(event) =>
+                setCortexOpacity(
+                  Number((event.target as HTMLInputElement).value)
+                )
+              }
             />
             <SliderOption
               id="subcortexopacity"
@@ -98,7 +102,11 @@ const BrainModel: React.FC = () => {
               max={1}
               defaultValue={subcortexOpacity}
               step={0.01}
-              onChange={(event) => setSubcortexOpacity(Number((event.target as HTMLInputElement).value))}
+              onChange={(event) =>
+                setSubcortexOpacity(
+                  Number((event.target as HTMLInputElement).value)
+                )
+              }
             />
           </OptionGroup>
         </div>
