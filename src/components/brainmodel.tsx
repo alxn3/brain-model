@@ -136,10 +136,9 @@ const BrainModel: React.FC = () => {
           <Bloom
             luminanceThreshold={0}
             luminanceSmoothing={1}
-            height={10}
-            opacity={0.5}
+            height={50}
+            opacity={0.3}
           />
-          <Suspense fallback={null}>
             <ModelScene
               selected={selected}
               setSelected={setSelected}
@@ -150,7 +149,6 @@ const BrainModel: React.FC = () => {
               cortexOpacity={cortexOpacity}
               subcortexOpacity={subcortexOpacity}
             />
-          </Suspense>
           <Noise opacity={0.0125} />
           <Vignette eskil={false} offset={0.1} darkness={theme==='dark' ? 1.1 : 0.5} />
         </EffectComposer>

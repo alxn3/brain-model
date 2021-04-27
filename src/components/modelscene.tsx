@@ -5,7 +5,7 @@ import DKT from 'data/DKT.json';
 import Destrieux from 'data/Destrieux.json';
 import Full from 'data/Full.json';
 import subcortical from 'data/subcortical.json';
-import { useRef, useState } from 'react';
+import { useRef, useState, Suspense } from 'react';
 
 type Props = {
   selected: any;
@@ -44,70 +44,77 @@ const ModelScene = ({
   return (
     <>
       <group ref={cortexRef}>
-        {!cortexHidden && model !== 'Full' ? (
-          Model[model].map((obj) => {
-            return (
-              <>
-                <BrainComponent
-                  key={'lh.' + obj.file}
-                  file={`models/${modelType}_${model}/lh.${modelType}.${model}.${obj.file}`}
-                  onClick={() => {
-                    setSelected(obj);
-                    console.log(obj);
-                  }}
-                  selected={obj.file == selected?.file}
-                  opacity={cortexOpacity}
-                />
-                <BrainComponent
-                  key={'rh.' + obj.file}
-                  file={`models/${modelType}_${model}/rh.${modelType}.${model}.${obj.file}`}
-                  onClick={() => {
-                    setSelected(obj);
-                    console.log(obj);
-                  }}
-                  selected={obj.file == selected?.file}
-                  opacity={cortexOpacity}
-                />
-              </>
-            );
-          })
-        ) : (
-          <>
-            <BrainComponent
-              key={`lh.${modelType}.obj`}
-              file={`models/${modelType}_${model}/lh.${modelType}.${Model[model][0].file}`}
-              onClick={() => {
-                setSelected(Model[model][0]);
-              }}
-              selected={Model[model][0].name == selected?.name}
-              opacity={cortexOpacity}
-            />
-            <BrainComponent
-              key={`rh.${modelType}.obj`}
-              file={`models/${modelType}_${model}/rh.${modelType}.${Model[model][1].file}`}
-              onClick={() => {
-                setSelected(Model[model][1]);
-              }}
-              selected={Model[model][1].name == selected?.name}
-              opacity={cortexOpacity}
-            />
-          </>
-        )}
+        {!cortexHidden &&
+          (model !== 'Full' ? (
+            Model[model].map((obj) => {
+              return (
+                <>
+                  <Suspense fallback={null}>
+                    <BrainComponent
+                      key={'lh.' + obj.file}
+                      file={`models/${modelType}_${model}/lh.${modelType}.${model}.${obj.file}`}
+                      onClick={() => {
+                        setSelected(obj);
+                        console.log(obj);
+                      }}
+                      selected={obj.file == selected?.file}
+                      opacity={cortexOpacity}
+                    />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <BrainComponent
+                      key={'rh.' + obj.file}
+                      file={`models/${modelType}_${model}/rh.${modelType}.${model}.${obj.file}`}
+                      onClick={() => {
+                        setSelected(obj);
+                        console.log(obj);
+                      }}
+                      selected={obj.file == selected?.file}
+                      opacity={cortexOpacity}
+                    />
+                  </Suspense>
+                </>
+              );
+            })
+          ) : (
+            <Suspense fallback={null}>
+              <BrainComponent
+                key={`lh.${modelType}.obj`}
+                file={`models/${modelType}_${model}/lh.${modelType}.${Model[model][0].file}`}
+                onClick={() => {
+                  setSelected(Model[model][0]);
+                }}
+                selected={Model[model][0].name == selected?.name}
+                opacity={cortexOpacity}
+              />
+              <BrainComponent
+                key={`rh.${modelType}.obj`}
+                file={`models/${modelType}_${model}/rh.${modelType}.${Model[model][1].file}`}
+                onClick={() => {
+                  setSelected(Model[model][1]);
+                }}
+                selected={Model[model][1].name == selected?.name}
+                opacity={cortexOpacity}
+              />
+            </Suspense>
+          ))}
       </group>
       <group ref={subcortexRef}>
         {!subcortexHidden &&
           subcortical.map((obj) => {
             return (
-              <BrainComponent
-                key={obj.file}
-                file={`models/subcortical/${obj.file}`}
-                onClick={() => {
-                  setSelected(obj);
-                  console.log(obj);
-                }}
-                selected={obj.file == selected?.file}
-                opacity={subcortexOpacity}
-              />
+              <Suspense fallback={null}>
+                <BrainComponent
+                  key={obj.file}
+                  file={`models/subcortical/${obj.file}`}
+                  onClick={() => {
+                    setSelected(obj);
+                    console.log(obj);
+                  }}
+                  selected={obj.file == selected?.file}
+                  opacity={subcortexOpacity}
+                />
+              </Suspense>
             );
           })}
       </group>
